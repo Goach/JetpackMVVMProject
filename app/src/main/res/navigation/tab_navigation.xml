@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tab_navigation"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.goach.mvvm.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/mediaFragment"
+        android:name="com.goach.mvvm.fragment.MediaFragment"
+        android:label="fragment_media"
+        tools:layout="@layout/fragment_media" />
+    <fragment
+        android:id="@+id/hotFragment"
+        android:name="com.goach.mvvm.fragment.HotFragment"
+        android:label="fragment_hot"
+        tools:layout="@layout/fragment_hot" />
+    <fragment
+        android:id="@+id/playFragment"
+        android:name="com.goach.mvvm.fragment.PlayFragment"
+        android:label="fragment_play"
+        tools:layout="@layout/fragment_play" />
+    <fragment
+        android:id="@+id/meFragment"
+        android:name="com.goach.mvvm.fragment.MeFragment"
+        android:label="fragment_me"
+        tools:layout="@layout/fragment_me" />
+</navigation>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MVVM框架</string>
+    <string name="back_btn">返回按钮</string>
+    <string name="tab_home">首页</string>
+
+    <string name="hello_home_fragment">Hello Home fragment</string>
+    <string name="hello_media_fragment">Hello Media fragment</string>
+    <string name="hello_hot_fragment">Hello Hot fragment</string>
+    <string name="hello_play_fragment">Hello Play fragment</string>
+    <string name="hello_me_fragment">Hello Me fragment</string>
+</resources>

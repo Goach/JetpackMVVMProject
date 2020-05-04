@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="event"
+            type="com.goach.mvvm.vm.BottomViewEvent" />
+        <variable
+            name="vm"
+            type="com.goach.mvvm.widget.BottomTabLayout.TabModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:paddingTop="5dp"
+        android:onClick="@{(v)->event.clickTab(v,vm.position)}"
+        android:background="@drawable/ripple_circle_bg"
+        android:paddingBottom="5dp">
+        <ImageView
+            android:id="@+id/iv_tab_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_home"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="@string/tab_home"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/tv_tab"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:text="@{vm.tabTitle}"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@+id/iv_tab_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

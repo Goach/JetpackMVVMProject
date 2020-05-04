@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.goach.mvvm.vm.widget.TitleBarViewModel" />
+    </data>
+
+    <merge
+        tools:layout_height="wrap_content"
+        tools:layout_width="match_parent"
+        tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_circle_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="10dp"
+            android:visibility="@{vm.backVisible}"
+            android:contentDescription="@string/back_btn"
+            android:src="@drawable/ic_arrow_left_69_72"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="@{vm.pageTitle}"
+            android:textColor="#3B3B3B"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/view_status_bar" />
+
+        <View
+            android:id="@+id/view_status_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@{vm.statusBarHeight,default=wrap_content}"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_height="19dp" />
+    </merge>
+</layout>
